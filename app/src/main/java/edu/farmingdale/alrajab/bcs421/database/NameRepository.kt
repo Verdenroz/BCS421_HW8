@@ -46,5 +46,9 @@ class NameRepository private constructor(context: Context) {
 
     fun deleteUser(usr: User) = usrDao.delete(usr)
 
+    fun findByName(first: String, last: String) = usrDao.findByName(first, last)
+
+    fun updateName(first: String, last: String, id: Int) = usrDao.updateName(first, last, id)
+
 
 }

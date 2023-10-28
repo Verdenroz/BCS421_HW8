@@ -5,19 +5,118 @@
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".database.DatabaseActivity">
 
-    <Button
-        android:id="@+id/read_data"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Read data" />
+        android:orientation="horizontal"
+        android:paddingVertical="10dp"
+        >
+
+        <EditText
+            android:id="@+id/database_firstname"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="First Name" />
+        <EditText
+            android:id="@+id/database_lastname"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="Last Name" />
+    </LinearLayout>
 
     <Button
         android:id="@+id/write_data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="Write data" />
+        android:text="Write data"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingVertical="10dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight=".25">
+            <EditText
+                android:id="@+id/database_oldfirstname"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:hint="Old first name"
+                android:inputType="text" />
+            <EditText
+                android:id="@+id/database_oldlastname"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:hint="Old last name"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight=".25">
+            <EditText
+                android:id="@+id/database_newfirstname"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:hint="New first name"
+                android:inputType="text" />
+            <EditText
+                android:id="@+id/database_newlastname"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:ems="10"
+                android:hint="New last name"
+                android:inputType="text" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/updateName_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight=".2"
+            android:text="Update Name" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/fileUpdate_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update data from files"
+        android:layout_gravity="center"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp"/>
+
+    <Button
+        android:id="@+id/read_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Read data"
+        android:layout_gravity="center"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
 </LinearLayout>
